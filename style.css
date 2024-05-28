@@ -1,0 +1,275 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+.btn {
+  display: block;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 15px 30px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  background-color: #1e6797;
+}
+
+/* Заголовок */
+header {
+  background-color: #2980b9;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin-top:50px;
+  font-weight: 700;
+}
+h1 {
+  font-size: 36px;
+  margin-left:-1200px;
+  font-weight: 700;
+}
+
+p {
+  text-align:  center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* Основная часть */
+main {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Блоки с преимуществами, программой, 
+преподавателями, стоимостью и бонусами */
+.benefits, .program, .teachers, .cost, .bonuses {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+/* Блок с преимуществами */
+.benefits ul li {
+  padding-left: 0;
+  list-style-type: none;
+  position: relative;
+  padding-right: 40px;
+}
+
+.benefits ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Блок с программой */
+.program ul li {
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Блок с преподавателями
+ .teachers ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: center;
+} */
+
+.teachers ul {
+  display: flex;
+  justify-content: center;
+}
+/*
+.teachers ul li {
+  display: grid;
+  margin-bottom: 40px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: "gay name exp"
+                       "gay name2 exp2";
+}
+*/
+
+.teachers ul li {
+  display: flex;
+  height: max-content;
+  width: 20vw;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  margin: 0 60px;
+}
+
+.teachers img {
+  grid-area: gay;
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  border: 5px solid #afafaf;
+  background-size: cover;
+  margin: 0 0 20px 0;
+}
+
+.teachers h3 {
+  grid-area: name2;
+  margin: 10px auto;
+  width: 90%;
+  font-size: 24px;
+  font-weight: 500;
+}
+.teachers h4 {
+  grid-area: exp2;
+  margin: 10px auto;
+  width: 90%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.teachers p {
+  
+  font-size: 20px;
+  color: #666;
+}
+.name{
+  grid-area: name;
+}
+.work{
+  grid-area: exp;
+}
+
+/* Блок со стоимостью */
+.cost {
+  text-align: center;
+}
+
+.cost p {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cost p s {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 24px;
+}
+
+.cost a {
+  display: block;
+  background-color: #2980b9;
+  color: #fff;
+  margin-top: 30px;
+  padding: 15px 40px;
+  text-align: center;
+}
+.timer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer__items {
+  display: flex;
+  font-size: 48px;
+  margin: 0 auto;
+}
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
+
+.teachers__container {
+  display: flex;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  border: solid 4px #afafaf;
+}
+
+@media (max-width: 500px) {
+  .teachers {
+    padding: 0;
+  }
+  .teachers h2 {
+    padding: 30px 0 0 0;
+    font-size: 28px;
+  }
+  .teachers ul {
+    flex-direction: column;
+    padding: 0px 0;
+    align-items: center;
+  }
+  .teachers ul li {
+    width: 80vw;
+    margin: 0 0 40px 0;
+    padding: 20px 0 10px 0;
+  }
+}
